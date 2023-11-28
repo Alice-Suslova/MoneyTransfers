@@ -2,14 +2,19 @@ package ru.netology
 
 fun main() {
 
-    val amount = 15
+    val amount = 150
     val rate = 0.0075
 
-    if (amount > 35) {
+    if (amount > 0) {
         var commission = amount * rate
-        println("Комиссия за перевод составляет: " + commission + " рублей")
+        if (commission >= 35) {
+            println("Комиссия за перевод составляет: $commission рублей")
+        } else {
+            println("Комиссия за перевод составляет: 35 рублей")
+        }
+
     } else {
-        println("Сумма перевода должны быть больше 35 рублей")
+        println("Сумма перевода должны быть больше 0 рублей! ")
     }
 }
 
